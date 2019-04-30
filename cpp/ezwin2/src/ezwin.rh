@@ -1,4 +1,0 @@
-#include <windows.h> // needed by VC++
-
-#define IDD_EZASK_DIALOG 1
-#define IDC_EZASK_STATICTEXT1    101

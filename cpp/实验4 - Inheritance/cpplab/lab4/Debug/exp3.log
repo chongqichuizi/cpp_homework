@@ -1,6 +1,0 @@
-﻿D:\Microsoft Visual Studio\2017\community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(.\Debug\)包含从另一个项目(exp1.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
-cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
-  exp3.cpp
-c:\users\sumail\desktop\cpp\实验4 - inheritance\cpplab\lab4\exp3.cpp(16): warning C4305: “参数”: 从“double”到“float”截断
-c:\users\sumail\desktop\cpp\实验4 - inheritance\cpplab\lab4\exp3.cpp(19): warning C4305: “参数”: 从“double”到“float”截断
-  exp3.vcxproj -> C:\Users\sumail\Desktop\cpp\实验4 - Inheritance\cpplab\lab4\.\Debug\exp3.exe
