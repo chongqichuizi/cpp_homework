@@ -1,0 +1,4 @@
+﻿cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  shadowrect.cpp
+c:\users\sumail\desktop\cpp\实验4 - inheritance\cpplab\lab4\shadowrect.h(20): warning C4305: “参数”: 从“double”到“const float”截断
+  exp2.vcxproj -> C:\Users\sumail\Desktop\cpp\实验4 - Inheritance\cpplab\lab4\.\exp2___Win32_Debug\exp2.exe

@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ezwin - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\jade\LOCALS~1\Temp\RSP2D7.tmp" with contents
+[
+/nologo /MDd /Gm /GX /ZI /Od /I "../include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "BUILD_DLL" /D "_MBCS" /Fo"../obj/" /Fd"../obj/" /FD /GZ /c 
+"D:\code\ezwin2\src\ezsocket.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jade\LOCALS~1\Temp\RSP2D7.tmp" 
+Creating temporary file "C:\DOCUME~1\jade\LOCALS~1\Temp\RSP2D8.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib comdlg32.lib wsock32.lib Advapi32.lib shell32.lib Comctl32.lib /nologo /dll /pdb:none /debug /machine:I386 /out:"../lib/ezwin2.dll" /implib:"../lib/ezwin2.lib" 
+\code\ezwin2\obj\ezapp.obj
+\code\ezwin2\obj\ezbitmap.obj
+\code\ezwin2\obj\ezbrush.obj
+\code\ezwin2\obj\ezbutton.obj
+\code\ezwin2\obj\EZClientWindow.obj
+\code\ezwin2\obj\ezcolourbutton.obj
+\code\ezwin2\obj\ezcombobox.obj
+\code\ezwin2\obj\ezconfig.obj
+\code\ezwin2\obj\ezcursor.obj
+\code\ezwin2\obj\ezdialog.obj
+\code\ezwin2\obj\ezdragbar.obj
+\code\ezwin2\obj\ezfont.obj
+\code\ezwin2\obj\ezgdiresource.obj
+\code\ezwin2\obj\ezgfx.obj
+\code\ezwin2\obj\ezicon.obj
+\code\ezwin2\obj\ezimagelist.obj
+\code\ezwin2\obj\ezimagewin.obj
+\code\ezwin2\obj\ezlayout.obj
+\code\ezwin2\obj\ezlineedit.obj
+\code\ezwin2\obj\EZListBox.obj
+\code\ezwin2\obj\ezlistview.obj
+\code\ezwin2\obj\ezmainwindow.obj
+\code\ezwin2\obj\EZMDIChildWindow.obj
+\code\ezwin2\obj\ezmdimainwindow.obj
+\code\ezwin2\obj\EZMDIWindow.obj
+\code\ezwin2\obj\ezmenu.obj
+\code\ezwin2\obj\ezmenubar.obj
+\code\ezwin2\obj\ezmultilinebutton.obj
+\code\ezwin2\obj\EZNumberEdit.obj
+\code\ezwin2\obj\EZPane.obj
+\code\ezwin2\obj\ezpen.obj
+\code\ezwin2\obj\ezprogressbar.obj
+\code\ezwin2\obj\ezscrollbar.obj
+\code\ezwin2\obj\ezsimplescrollwindow.obj
+\code\ezwin2\obj\ezsocket.obj
+\code\ezwin2\obj\ezsplashscreen.obj
+\code\ezwin2\obj\ezstatic.obj
+\code\ezwin2\obj\ezstatusbar.obj
+\code\ezwin2\obj\ezsystem.obj
+\code\ezwin2\obj\eztaskbaricon.obj
+\code\ezwin2\obj\eztextedit.obj
+\code\ezwin2\obj\ezthread.obj
+\code\ezwin2\obj\eztimer.obj
+\code\ezwin2\obj\eztoolbar.obj
+\code\ezwin2\obj\eztooltip.obj
+\code\ezwin2\obj\eztreeview.obj
+\code\ezwin2\obj\ezwin.obj
+\code\ezwin2\obj\ezwindow.obj
+\code\ezwin2\obj\ezwin.res
+]
+Creating command line "link.exe @C:\DOCUME~1\jade\LOCALS~1\Temp\RSP2D8.tmp"
+<h3>Output Window</h3>
+Compiling...
+ezsocket.cpp
+Linking...
+   Creating library ../lib/ezwin2.lib and object ../lib/ezwin2.exp
+
+
+
+<h3>Results</h3>
+ezwin2.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
