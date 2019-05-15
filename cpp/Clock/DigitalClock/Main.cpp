@@ -16,7 +16,7 @@ int Clock(){
 		tm.GetTime(), Black, Green);
 	Label date(W, Position(WIN_SIZE / 2, WIN_SIZE / 6), dt.GetDate(), Black, Green);
 	time.SetFont("Arial", 120);
-	date.SetFont("Arial", 120);
+	date.SetFont("Arial", 70);
 	clock.Draw();
 	time.Draw();
 	date.Draw();
