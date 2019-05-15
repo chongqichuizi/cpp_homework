@@ -4,7 +4,8 @@
 
 
 #pragma once
-
+#include "Bug.h"
+#include <vector>
 
 class CBugHunt2018Doc : public CDocument
 {
@@ -17,7 +18,7 @@ public:
 
 // 操作
 public:
-
+	const std::vector<Bug*> &GetBuglist()const { return m_listBug; }
 // 重写
 public:
 	virtual BOOL OnNewDocument();
@@ -36,7 +37,7 @@ public:
 #endif
 
 protected:
-
+	std::vector<Bug*> m_listBug;
 // 生成的消息映射函数
 protected:
 	DECLARE_MESSAGE_MAP()

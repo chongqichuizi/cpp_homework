@@ -16,7 +16,7 @@
 #define new DEBUG_NEW
 #endif
 
-
+#define ID_TIMER_BUGMOVE 100
 // CBugHunt2018View
 
 IMPLEMENT_DYNCREATE(CBugHunt2018View, CView)
@@ -26,6 +26,9 @@ BEGIN_MESSAGE_MAP(CBugHunt2018View, CView)
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
+	ON_WM_TIMER()
+	ON_WM_CREATE()
+	ON_WM_ERASEBKGND()
 END_MESSAGE_MAP()
 
 // CBugHunt2018View 构造/析构
@@ -35,6 +38,7 @@ CBugHunt2018View::CBugHunt2018View() noexcept
 	// TODO: 在此处添加构造代码
 	if (m_bmpBackgroud.Load(_T(".\\Bitmap\\Frog.jpg")) != S_OK)//.\\表示当前的工作路径
 		AfxMessageBox(_T("Load the backgroud bitmap failed"));//_T作用是把非unicode字符集转换为unicode字符集
+	Sprite::SetParentWnd(this);
 }
 
 CBugHunt2018View::~CBugHunt2018View()
@@ -67,6 +71,10 @@ void CBugHunt2018View::OnDraw(CDC* pDC)
 	int x = (rectClient.Width() - w) / 2;
 	int y = (rectClient.Height() - h) / 2;
 	m_bmpBackgroud.Draw(pDC->GetSafeHdc(), x, y);//(0,0)为起点
+	for (auto p : pDoc->GetBuglist()) {
+		if (p)
+			p->Draw(pDC);
+	}
 }
 
 
@@ -111,3 +119,44 @@ CBugHunt2018Doc* CBugHunt2018View::GetDocument() const // 非调试版本是内�
 
 
 // CBugHunt2018View 消息处理程序
+
+
+void CBugHunt2018View::OnTimer(UINT_PTR nIDEvent)//时钟时间的ID
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+	CBugHunt2018Doc* pDoc = GetDocument();
+	ASSERT_VALID(pDoc);
+	if (!pDoc)
+		return;
+	switch (nIDEvent) {
+	case ID_TIMER_BUGMOVE:
+		for (auto p : pDoc->GetBuglist()) {
+			if (p)
+				p->Move();
+		}
+		break;
+	default:
+		break;
+	}
+	Invalidate();
+	CView::OnTimer(nIDEvent);
+}
+
+
+int CBugHunt2018View::OnCreate(LPCREATESTRUCT lpCreateStruct)
+{
+	if (CView::OnCreate(lpCreateStruct) == -1)
+		return -1;
+
+	// TODO:  在此添加您专用的创建代码
+	SetTimer(ID_TIMER_BUGMOVE, 30, NULL);
+	return 0;
+}
+
+
+BOOL CBugHunt2018View::OnEraseBkgnd(CDC* pDC)
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+
+	return TRUE; // CView::OnEraseBkgnd(pDC);
+}

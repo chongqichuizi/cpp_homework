@@ -30,7 +30,14 @@ END_MESSAGE_MAP()
 CBugHunt2018Doc::CBugHunt2018Doc() noexcept
 {
 	// TODO: 在此添加一次性构造代码
-
+	for (int i = 0; i < 5; ++i) {
+		Bug* pBug = new FastBug(_T(".\\Bitmap\\BlueBug36x36.bmp"), 4, 18, 10, 2, 1, 30);
+		m_listBug.push_back(pBug);
+	}
+	for (int i = 0; i < 5; ++i) {
+		Bug* pBug = new SlowBug(_T(".\\Bitmap\\RedBug96x96.bmp"), 4, 18, 5, 2, 1, 20);
+		m_listBug.push_back(pBug);
+	}
 }
 
 CBugHunt2018Doc::~CBugHunt2018Doc()

@@ -187,6 +187,7 @@
     <ClInclude Include="BugHunt2018.h" />
     <ClInclude Include="BugHunt2018Doc.h" />
     <ClInclude Include="BugHunt2018View.h" />
+    <ClInclude Include="frog.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Sprite.h" />
@@ -198,6 +199,7 @@
     <ClCompile Include="BugHunt2018.cpp" />
     <ClCompile Include="BugHunt2018Doc.cpp" />
     <ClCompile Include="BugHunt2018View.cpp" />
+    <ClCompile Include="frog.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="stdafx.cpp">

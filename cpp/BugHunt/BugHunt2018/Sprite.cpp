@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Sprite.h"
 
-CWnd* Sprite::m_pParentWnd = 0;
+CWnd* Sprite::m_pParentWnd = 0; //静态数据成员具有全局生命周期和类内作用范围的数据，必须在类构造函数之前定义。
 
 Sprite::Sprite()
 {
@@ -36,7 +36,7 @@ void Sprite::LoadImage(const CString& strBitmapFile, int nRow, int nCol)
 	else
 	{
 		CString strPrompt;
-		strPrompt.Format(_T("Load image file <%s> failed!"), strBitmapFile);
+		strPrompt.Format(_T("Load image file <%s> failed!"), strBitmapFile); //_T是把多字节字符串自动转化为unicode字符串
 		AfxMessageBox(strPrompt);
 	}
 }
@@ -45,7 +45,7 @@ CSize Sprite::GetPictureDimension()const
 {
 	int width  = m_Bmp.GetWidth();
 	int height = m_Bmp.GetHeight();
-	return CSize(width, height);
+	return CSize(width, height); //直接创建一个无名的对象，把类名直接写上加参数。
 }
 
 BOOL Sprite::AtLeftEdge()const
